@@ -8,6 +8,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  
   --cor-primaria: #e1e1e1;
   --cor-secundaria: #556889;
 }
@@ -52,7 +53,7 @@ input {
 }
 
 p {
-  color: rgb(204, 60, 60);
+  color: red;
   margin-bottom: 15px;
 }
 
@@ -88,7 +89,7 @@ footer {
 }
 
 .error-message {
-  color: #ff4d4d;
+  color: red;
   font-size: 0.85rem;
   margin-top: -12px;
   margin-bottom: 12px;
@@ -97,7 +98,7 @@ footer {
 }
 
 input.input-error {
-  border-color: #ff4d4d;
+  border-color: red;
 }
 
 @media (width >= 768px) {
@@ -113,6 +114,7 @@ input.input-error {
       border-radius: 8px;
       width: 350px;
   }
+
   form {
     display: flex;
     flex-direction: column;
