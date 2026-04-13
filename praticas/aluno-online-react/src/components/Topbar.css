@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    --cor-texto: #303030;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    color: var(--cor-texto);
+    justify-content: space-between;
+    margin: 30px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
