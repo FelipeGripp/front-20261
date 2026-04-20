@@ -1,7 +1,7 @@
 import Card from "../components/Card";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import './dashboard.css'
+import './Dashboard.css'
 
 function Dashboard() {
     return (

@@ -1,0 +1,23 @@
+caption {
+font-weight: bold;
+text-align: left;
+padding: 8px;
+background-color: var(--cor-fundo);
+border-radius: 10px 10px 0 0;
+
+}
+
+table {
+    width: 90%;
+    border: 0.5px solid var(--cor-fundo);
+    margin: 20px;
+    background-color: var(--cor-fundo);
+    border-radius: 0 0 10px 10px;
+    
+}
+
+
+
+td {
+  background-color: white;
+}
