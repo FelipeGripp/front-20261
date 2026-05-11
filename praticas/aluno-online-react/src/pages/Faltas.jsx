@@ -1,13 +1,21 @@
-import Tabela from '../components/TableFaltas';
-import './Faltas.css';
+import Sidebar from '../components/Sidebar'
+import TableFaltas from '../components/TableFaltas';
+import Topbar from '../components/Topbar'
 
 function Faltas() {
     return (
-        <section className="faltas-container">
-            <h1>Faltas</h1>
-            <Tabela />
-        </section>
-    );
+   <div className='center'>
+        <Sidebar />
+        
+        <main>
+        <Topbar titulo="Minhas Faltas" />
+
+    <h2> Histórico de Faltas por semestre </h2>
+
+    <TableFaltas />    
+    </main>
+    </div>
+    )
 }
 
 export default Faltas;

@@ -1,12 +1,20 @@
-import Tabela from '../components/TableNotas';
-import './Notas.css';
+import Sidebar from '../components/Sidebar'
+import TableNotas from '../components/TableNotas';
+import Topbar from '../components/Topbar'
 
 function Notas() {
     return (
-        <section className="notas-container">
-            <h1>Notas</h1>
-            <Tabela />
-        </section>
+       <div className='center'>
+        <Sidebar />
+        
+        <main>
+        <Topbar titulo="Minhas Notas" />
+
+    <h2> Histórico de Pagamentos </h2>
+
+    <TableNotas />  
+    </main>
+    </div>
     );
 }
 

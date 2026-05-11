@@ -1,18 +1,17 @@
-import './Sidebar.css';
-import Menu from "./Menu";
-import learnIcon from '../assets/learn.svg';
+import './Sidebar.css'
+import Menu from "./Menu"
 
 function Sidebar() {
     return (
-        <div className='sidebar'>
-            <header>
-                <img src={learnIcon} alt="Icone do Capelo" />
-                <h3>Aluno Online</h3>
-            </header>
+        <div class= 'sidebar'>
+        <header>
+          <img src="../src/assets/learn.svg" alt="Icone do Capelo"/>
+          <h3>Aluno Online</h3>
+        </header>
 
-            <Menu />
+        <Menu />
         </div>
-    );
+    )
 }
 
 export default Sidebar;

@@ -1,14 +1,21 @@
-import Card from '../components/Card';
-import './Dashboard.css';
+import Card from "../components/Card";
+import Sidebar from "../components/Sidebar";
+import Topbar from "../components/Topbar";
+import './dashboard.css'
 
 function Dashboard() {
     return (
-        <section className="dashboard-grid">
-            <Card title="Notas" value="8.5" />
-            <Card title="Frequência" value="92%" />
-            {}
-        </section>
-    );
-}
+    <div className= 'center'>
+        <Sidebar />
 
-export default Dashboard;
+        <main>
+        <Topbar titulo="Olá, Aluno!" />
+
+        <h2>Bem-vindo ao portal do aluno</h2>
+
+        <Card />
+    </main>
+    </div>
+    )}
+
+    export default Dashboard;
