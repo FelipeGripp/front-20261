@@ -44,6 +44,19 @@
     background-color: #233235;
 }
 
+.requerimentos-feedback {
+    background: transparent;
+    margin: 20px;
+    padding: 0;
+}
+
+.requerimentos-error {
+    background: transparent;
+    color: #b00000;
+    margin: 20px;
+    padding: 0;
+}
+
 .sidebar {
     width: 300px;
 }

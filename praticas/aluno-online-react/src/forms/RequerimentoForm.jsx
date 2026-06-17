@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { cadastrarRequerimento } from '../services/requerimentoService';
 import './RequerimentoForm.css';
 
 function getCurrentDate() {
@@ -12,7 +13,8 @@ function RequerimentoForm() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    setError,
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       tipo: '',
@@ -21,13 +23,24 @@ function RequerimentoForm() {
     },
   });
 
-  function onSubmit(data) {
-    console.log('Novo requerimento:', data);
+  async function onSubmit(data) {
+    try {
+      const requerimento = await cadastrarRequerimento(data);
+      console.log('Novo requerimento:', requerimento);
+    } catch (error) {
+      setError('root', {
+        type: 'server',
+        message: error.message,
+      });
+      return;
+    }
+
     reset({
       tipo: '',
       descricao: '',
       dataRequerimento: getCurrentDate(),
     });
+    navigate('/requerimentos');
   }
 
   function handleCancel() {
@@ -94,8 +107,12 @@ function RequerimentoForm() {
           <button type="button" onClick={handleCancel}>
             Cancelar
           </button>
-          <button type="submit">Salvar</button>
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Salvando...' : 'Salvar'}
+          </button>
         </div>
+
+        {errors.root && <span className="requerimento-error">{errors.root.message}</span>}
       </form>
     </section>
   );
