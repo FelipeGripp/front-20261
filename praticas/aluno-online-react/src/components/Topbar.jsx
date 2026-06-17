@@ -1,12 +1,18 @@
 import './Topbar.css'
+import useAuth from '../contexts/useAuth';
 
 function Topbar({titulo}) {
+ const { usuario } = useAuth();
+
  return (
     <div>
-        <header>
-      <h1>{titulo}</h1>
+        <header className="topbar">
+      <h1>{titulo || 'Dashboard'}</h1>
 
-      <img src="../src/assets/avatar.svg" width="64" />
+      <div className="topbar-user">
+        <span>{usuario?.nome || usuario?.email}</span>
+        <img src="../src/assets/avatar.svg" width="64" alt="Avatar do usuario" />
+      </div>
       
       </header>
     </div>

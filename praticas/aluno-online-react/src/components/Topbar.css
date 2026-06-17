@@ -14,15 +14,26 @@
     
 }
 
-header {
+.topbar {
     display: flex;
     flex-direction: row;
     color: var(--cor-texto);
     justify-content: space-between;
+    align-items: center;
     margin: 30px;
 }
 
-img {
+.topbar-user {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.topbar-user span {
+    font-size: 0.95rem;
+}
+
+.topbar-user img {
     height: 50px;
     width: 50px;
 }

@@ -1,12 +1,21 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import useAuth from '../contexts/useAuth';
 import './Menu.css';
 
 function Menu() {
+    const { logout } = useAuth();
+    const navigate = useNavigate();
+
+    function handleLogout() {
+        logout();
+        navigate('/login');
+    }
+
     return (
         <nav className="menu-nav">
             <ul>
                 <li>
-                    <NavLink to="/" end>Dashboard</NavLink>
+                    <NavLink to="/dashboard">Dashboard</NavLink>
                 </li>
                 <li>
                     <NavLink to="/notas">Notas</NavLink>
@@ -21,7 +30,9 @@ function Menu() {
                     <NavLink to="/requerimentos">Requerimentos</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/login">Sair</NavLink>
+                    <button className="menu-logout" type="button" onClick={handleLogout}>
+                        Sair
+                    </button>
                 </li>
             </ul>
         </nav>
