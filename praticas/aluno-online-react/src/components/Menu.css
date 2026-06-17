@@ -21,9 +21,19 @@ ul {
     padding: 10px;
 }
 
-.menu a.active {
+.menu-nav a.active {
     background-color: #333;
     color: #fff;
     font-weight: bold;
     border-left: 4px solid #007bff;
   }
+
+.menu-logout {
+    background: transparent;
+    border: 0;
+    color: var(--cor-texto);
+    cursor: pointer;
+    font: inherit;
+    line-height: 40px;
+    padding: 0;
+}
